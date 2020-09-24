@@ -58,7 +58,18 @@ class Triangulo(Punto):
             else:
                 return "Es escaleno"
 
+class Circulo(Punto):
+    def __init__(self,centro,radio):
+        self.centro = centro
+        self.radio = radio
 
+    def hallarPerimetro(self):
+        p = 2 * math.pi * self.radio
+        return p
+
+    def hallarArea(self):
+        a = math.pi * math.pow(self.radio, 2)
+        return a
 
 
 
